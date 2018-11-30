@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="image"
+			directory=""
+			type="media"
+			class="project_image"
+			label="COM_KWPRODUCTS_SUBFORM_LBL_IMAGES_IMAGE"
+			description="COM_KWPRODUCTS_SUBFORM_DESC_IMAGES_IMAGE" hint="COM_KWPRODUCTS_SUBFORM_LBL_IMAGES_IMAGE"/>
+			<field name="alt_image"
+				type="text"
+				class="alt_image"
+				label="COM_KWPRODUCTS_SUBFORM_ALT_IMAGE"
+				description=""/>
+		</fieldset>
+	</form>

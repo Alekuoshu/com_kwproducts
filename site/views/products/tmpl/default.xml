@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_KWPRODUCTS_TITLE_LIST_VIEW_PRODUCTS" option="View">
+		<message>
+			<![CDATA[COM_KWPRODUCTS_TITLE_LIST_VIEW_PRODUCTS_DESC]]>
+		</message>
+	</layout>
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request">
+			<field
+				name="catid"
+				type="category"
+				description="JGLOBAL_CHOOSE_CATEGORY_DESC"
+				extension="com_kwproducts"
+				label="JGLOBAL_CHOOSE_CATEGORY_LABEL"
+				required="true"
+				default=""
+				>
+				<option value="">COM_KWPRODUCTS_LIST_CHOOSE_CATEGORY</option>
+			</field>
+		</fieldset>
+	</fields>
+	<!-- Add fields to the parameters object for the layout. -->
+	<fields name="params">
+		<fieldset name="basic" label="COM_KWPRODUCTS_PRODUCTS_OPTIONS">
+			<field name="infinite_scroll"
+				type="radio"
+				default="0"
+				label="COM_KWPRODUCTS_PRODUCTS_LABEL_INIFINITESCROLL"
+				description="COM_KWPRODUCTS_PRODUCTS_DESC_INIFINITESCROLL"
+				class="btn-group btn-group-yesno">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="num_intro_products"
+				type="number"
+				label="COM_KWPRODUCTS_PRODUCTS_NUM_INTRO"
+				description="COM_KWPRODUCTS_PRODUCTS_NUM_INTRO_DESC"
+				default="9"
+				size="3"
+			/>
+			<field name="num_columns"
+				type="list"
+				default="3"
+				label="JGLOBAL_NUM_COLUMNS_LABEL"
+				description="COM_KWPRODUCTS_PRODUCTS_NUM_COLUMNS_DESC">
+				<option value="2">COM_KWPRODUCTS_PRODUCTS_COLS_TWO</option>
+				<option value="3">COM_KWPRODUCTS_PRODUCTS_COLS_THREE</option>
+				<option value="4">COM_KWPRODUCTS_PRODUCTS_COLS_FOUR</option>
+			</field>
+			<field name="copyright"
+				type="radio"
+				default="1"
+				label="COM_KWPRODUCTS_PRODUCTS_LABEL_COPYRIGHT"
+				description="COM_KWPRODUCTS_PRODUCTS_DESC_COPYRIGHT"
+				class="btn-group btn-group-yesno">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

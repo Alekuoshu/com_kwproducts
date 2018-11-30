@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="social_name"
+			default="none"
+			type="list"
+			label="COM_KWPRODUCTS_SUBFORM_LBL_SOCIAL_SOCIAL_NAME"
+			description="COM_KWPRODUCTS_SUBFORM_DESC_SOCIAL_SOCIAL_NAME"
+			class="social_name"
+			>
+			<option value="none">Choose an option</option>
+			<option value="Facebook">Facebook</option>
+			<option value="instagram">Instagram</option>
+			<option value="Instagram">Twitter</option>
+			<option value="Google">Google+</option>
+			<option value="Linkedin">Linkedin</option>
+			<option value="Pinterest">Pinterest</option>
+		</field>
+		<field name="social_url"
+			validate="url"
+			type="url"
+			class="social_url"
+			label="COM_KWPRODUCTS_SUBFORM_LBL_SOCIAL_SOCIAL_URL"
+			description="COM_KWPRODUCTS_SUBFORM_DESC_SOCIAL_SOCIAL_URL"
+			hint="COM_KWPRODUCTS_SUBFORM_LBL_SOCIAL_SOCIAL_URL"/>
+	</fieldset>
+</form>

@@ -1,0 +1,305 @@
+/*Photo gallery slide*/
+.modalGallery {
+	background: transparent;
+	box-shadow: none;
+	border: none;
+	right: 0;
+	left: 0;
+	margin: 0;
+	height: 630px;
+	width: 100%;
+}
+
+.modalGallery.modal.fade.in {
+	top: 12% !important;
+	box-shadow: none;
+}
+
+.modalGallery .carousel {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	height: 100%;
+}
+
+.modalGallery .modal-body {
+	background: transparent;
+	background-imagen: none !important;
+	background-size: inherit;
+	overflow: visible;
+	position: relative;
+	border: none;
+}
+
+.modalGallery button.close {
+	background: white;
+	border-radius: 50%;
+	box-shadow: -2px 1px 8px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: -2px 1px 8px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: -2px 1px 8px rgba(0, 0, 0, 0.4);
+	-o-box-shadow: -2px 1px 8px rgba(0, 0, 0, 0.4);
+	color: #ccc;
+	font-size: 1.5em;
+	opacity: 1;
+	position: absolute;
+	right: -17px;
+	top: -21px;
+	z-index: 4;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+}
+
+.modalGallery button.close:hover {
+	background: white;
+	color: red;
+	font-weight: bold;
+	opacity: 1;
+}
+
+.modalGallery .carousel-inner {
+	height: 100%;
+	position: relative;
+}
+
+.modalGallery .carousel-inner>.item {
+	height: 100%;
+}
+
+.modalGallery .carousel-inner>.item p {
+	margin-bottom: 0;
+}
+
+.modalGallery .carousel-inner>.item>img {
+	width: auto;
+	height: 100%;
+	text-align: center;
+	margin: auto;
+}
+
+.modalGallery .slide .carousel-control {
+	background-color: transparent;
+	border: none !important;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	padding: .2em;
+	opacity: 0.8;
+	top: 50%;
+	z-index: 9999;
+	width: 30px;
+	height: 30px;
+	font-size: 80px;
+}
+
+.modalGallery .slide .carousel-control:hover {
+	opacity: 1;
+	background-color: transparent;
+}
+
+@media only screen and (max-width: 767px) {
+	.modalGallery .slide .carousel-control {
+		top: 46%;
+	}
+}
+
+.modalGallery a.left {
+	left: -8%;
+}
+
+@media only screen and (max-width: 480px) {
+	.modalGallery a.left {
+		left: -28%;
+	}
+}
+
+.modalGallery a.left img {
+	margin-top: -4px;
+	margin-left: -7px;
+	height: 30px;
+	width: 30px;
+}
+
+.modalGallery a.right {
+	right: -8%;
+}
+
+@media only screen and (max-width: 480px) {
+	.modalGallery a.right {
+		right: -28%;
+	}
+}
+
+.modalGallery a.right img {
+	margin-top: -4px;
+	margin-right: -7px;
+	height: 30px;
+	width: 30px;
+}
+
+.modalGallery a.left:hover,
+.modalGallery a.right:hover {
+	background: rgba(0, 0, 0, 0.8);
+	text-decoration: none;
+}
+
+.modal-backdrop.in {
+	opacity: 0.7 !important;
+}
+
+
+
+/*Modal generico*/
+.modal.modalGallery {
+	width: 65%;
+	height: 80%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background: transparent;
+	border: 0;
+}
+
+@media only screen and (min-width: 980px) and (max-width: 1199px) {
+	.modal.modalGallery {
+		height: 350px;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+	.modal.modalGallery {
+		height: 200px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.modal.modalGallery {
+		height: 35%;
+	}
+}
+
+.modal.fade.in {
+	top: 5%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+	.modal.modalGallery {
+		height: 90%;
+	}
+}
+
+.modal.modalGallery .modal-body {
+	box-shadow: unset !important;
+	border-radius: 0;
+	padding: 1.6em;
+	max-height: 100% !important;
+	height: 100%;
+}
+
+@media only screen and (min-width: 1200px) {
+	.modal.modalGallery .modal-body {
+		height: 80%;
+	}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+	.modal.modalGallery .modal-body {
+		height: 90%;
+	}
+}
+
+@media only screen and (min-width: 325px) and (max-width: 480px) {
+	.modal.modalGallery .modal-body {
+		height: 80%;
+	}
+}
+
+@media only screen and (max-width: 324px) {
+	.modal.modalGallery .modal-body {
+		height: 50%;
+	}
+}
+
+.modal.modalGallery iframe {
+	width: 95% !important;
+	height: 90% !important;
+	display: block;
+	position: absolute;
+	top: 4.5%;
+	left: 2.5%;
+	right: 0;
+	bottom: 0;
+}
+
+.modal.modalGallery .close {
+	color: white;
+	opacity: 1;
+	position: absolute;
+	right: -2%;
+	top: -3%;
+	z-index: 2;
+	width: 35px;
+	height: 35px;
+	color: #666;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 3em;
+	font-weight: normal;
+	padding: 0;
+}
+
+@media only screen and (min-width: 1800px) {
+	.modal.modalGallery .close {
+		padding: 1em;
+		position: absolute;
+		right: -6%;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.modal.modalGallery .close {
+		right: -8%;
+		top: 1%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.modal.modalGallery .close {
+		right: -15%;
+		top: -23%;
+	}
+}
+
+/*fade effect*/
+.modalGallery .carousel-inner .item {
+	opacity: 0;
+	-webkit-transition-property: opacity;
+	-moz-transition-property: opacity;
+	-o-transition-property: opacity;
+	transition-property: opacity;
+}
+
+.modalGallery .carousel-inner .active {
+	opacity: 1;
+}
+
+.modalGallery .carousel-inner .active.left,
+.modalGallery .carousel-inner .active.right {
+	left: 0;
+	opacity: 0;
+	z-index: 1;
+}
+
+.modalGallery .carousel-inner .next.left,
+.modalGallery .carousel-inner .prev.right {
+	opacity: 1;
+}
+
+.modalGallery .carousel-control {
+	z-index: 2;
+}

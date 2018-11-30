@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form><fieldset><field name="social_name" maxlength="100" filter="safehtml" type="text" class="social_name" label="COM_KWPRODUCTS_SUBFORM_LBL_SOCIAL_SOCIAL_NAME" description="COM_KWPRODUCTS_SUBFORM_DESC_SOCIAL_SOCIAL_NAME" hint="COM_KWPRODUCTS_SUBFORM_LBL_SOCIAL_SOCIAL_NAME"/><field name="social_url" validate="url" type="url" class="social_url" label="COM_KWPRODUCTS_SUBFORM_LBL_SOCIAL_SOCIAL_URL" description="COM_KWPRODUCTS_SUBFORM_DESC_SOCIAL_SOCIAL_URL" hint="COM_KWPRODUCTS_SUBFORM_LBL_SOCIAL_SOCIAL_URL"/></fieldset></form>

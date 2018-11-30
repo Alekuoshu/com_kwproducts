@@ -1,0 +1,16 @@
+.page-autoload-marker {
+	text-align: center;
+	margin: 15px 0;
+	-webkit-animation: working 1s infinite;
+	-moz-animation: working 1s infinite;
+	-o-animation: working 1s infinite;
+	animation: working 1s infinite;
+}
+
+.loading {
+	text-align: center;
+}
+
+.loading img {
+	max-width: 70px;
+}

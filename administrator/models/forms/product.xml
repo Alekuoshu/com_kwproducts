@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+		<field name="ordering"/>
+		<field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+		<field name="checked_out" type="hidden" filter="unset"/>
+		<field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+		<field name="created_by" type="createdby" default="0" label="COM_KWPRODUCTS_FORM_LBL_PRODUCT_CREATED_BY" description="COM_KWPRODUCTS_FORM_DESC_PRODUCT_CREATED_BY" hidden="true" hint="COM_KWPRODUCTS_FORM_LBL_PRODUCT_CREATED_BY"/>
+		<field name="modified_by" type="modifiedby" default="0" label="COM_KWPRODUCTS_FORM_LBL_PRODUCT_MODIFIED_BY" description="COM_KWPRODUCTS_FORM_DESC_PRODUCT_MODIFIED_BY" hidden="true" hint="COM_KWPRODUCTS_FORM_LBL_PRODUCT_MODIFIED_BY"/>
+		<field name="product"
+			maxlength="100"
+			filter="safehtml"
+			type="text"
+			class="product_name"
+			required="true"
+			message="Este campo es requerido"
+			label="COM_KWPRODUCTS_FORM_LBL_PRODUCT_PRODUCT"
+			description="COM_KWPRODUCTS_FORM_DESC_PRODUCT_PRODUCT"
+			hint="COM_KWPRODUCTS_FORM_LBL_PRODUCT_PRODUCT"/>
+		<field name="alias"
+			type="text"
+			class="inputbox"
+			generator="product"
+			label="COM_KWPRODUCTS_FORM_LBL_PRODUCT_ALIAS"
+			description="COM_KWPRODUCTS_FORM_DESC_PRODUCT_ALIAS"
+			hint="COM_KWPRODUCTS_FORM_LBL_PRODUCT_ALIAS"/>
+		<field name="catid"
+			extension="com_kwproducts"
+			type="category"
+			class="product_category"
+			required="true"
+			message="Este campo es requerido"
+			label="COM_KWPRODUCTS_FORM_LBL_PRODUCT_CATID"
+			description="COM_KWPRODUCTS_FORM_DESC_PRODUCT_CATID"
+			hint="COM_KWPRODUCTS_FORM_LBL_PRODUCT_CATID"/>
+		<field name="publishdate"
+			type="calendar"
+			default="NOW"
+			label="COM_KWPRODUCTS_FORM_LBL_PRODUCT_PUBLISHDATE"
+			description="COM_KWPRODUCTS_FORM_DESC_PRODUCT_PUBLISHDATE"
+			required="true"
+			filter="server_utc"
+			format="%Y-%m-%d %H:%M:%S"
+			singleheader="false"
+			showtime="true"
+			timeformat="12"
+			todaybutton="true"
+			weeknumbers="true"
+			filltable="true"
+			minyear="-3"
+			maxyear="5" />
+		<field name="introimage"
+			directory=""
+			type="media"
+			class="introimage"
+			required="true"
+			message="Este campo es requerido"
+			label="COM_KWPRODUCTS_FORM_LBL_PRODUCT_INTROIMAGE" description="COM_KWPRODUCTS_FORM_DESC_PRODUCT_INTROIMAGE" hint="COM_KWPRODUCTS_FORM_LBL_PRODUCT_INTROIMAGE"/>
+		<field name="media_gallery"
+			type="radio"
+			default="0"
+			label="COM_KWPRODUCTS_PRODUCTS_LABEL_GALLERYVIDEOYESNO"
+			description="COM_KWPRODUCTS_PRODUCTS_DESC_GALLERYVIDEOYESNO"
+			class="btn-group btn-group-yesno">
+			<option value="0">COM_KWPRODUCTS_PRODUCTS_OPTION_NONE</option>
+			<option value="1">COM_KWPRODUCTS_PRODUCTS_OPTION_GALLERY</option>
+			<option value="2">COM_KWPRODUCTS_PRODUCTS_OPTION_VIDEO</option>
+		</field>
+		<field name="images"
+			multiple="true"
+			formsource="administrator/components/com_kwproducts/models/forms/subform_images.xml" layout="joomla.form.field.subform.repeatable-table"
+			type="subform"
+			class="gallery"
+			label="COM_KWPRODUCTS_FORM_LBL_PRODUCT_IMAGES"
+			description="COM_KWPRODUCTS_FORM_DESC_PRODUCT_IMAGES"
+			hint="COM_KWPRODUCTS_FORM_LBL_PRODUCT_IMAGES"
+			showon="media_gallery:1"/>
+		<field name="video"
+			maxlength="200"
+			filter="safehtml"
+			type="text"
+			class="product_video"
+			label="COM_KWPRODUCTS_FORM_LBL_PRODUCT_VIDEO"
+			description="COM_KWPRODUCTS_FORM_DESC_PRODUCT_VIDEO"
+			hint="COM_KWPRODUCTS_FORM_LBL_PRODUCT_VIDEO"
+			showon="media_gallery:2"/>
+		<field name="description"
+			editor="|"
+			buttons="true"
+			filter="JComponentHelper::filterText"
+			type="editor"
+			class="product_desc"
+			label="COM_KWPRODUCTS_FORM_LBL_PRODUCT_DESCRIPTION" description="COM_KWPRODUCTS_FORM_DESC_PRODUCT_DESCRIPTION" hint="COM_KWPRODUCTS_FORM_LBL_PRODUCT_DESCRIPTION"
+			required="true"/>
+		<field name="url"
+			validate="url"
+			type="url"
+			class="product_url"
+			label="COM_KWPRODUCTS_FORM_LBL_PRODUCT_URL"
+			description="COM_KWPRODUCTS_FORM_DESC_PRODUCT_URL"
+			hint="COM_KWPRODUCTS_FORM_LBL_PRODUCT_URL"/>
+		<field name="social"
+			multiple="true"
+			formsource="administrator/components/com_kwproducts/models/forms/subform_social.xml" layout="joomla.form.field.subform.repeatable-table"
+			type="subform"
+			class="product_social"
+			label="COM_KWPRODUCTS_FORM_LBL_PRODUCT_SOCIAL"
+			description="COM_KWPRODUCTS_FORM_DESC_PRODUCT_SOCIAL"
+			hint="COM_KWPRODUCTS_FORM_LBL_PRODUCT_SOCIAL"/>
+		<field name="metakey"
+			rows="5"
+			filter="raw"
+			type="textarea"
+			class="metakey"
+			label="COM_KWPRODUCTS_FORM_LBL_PRODUCT_METAKEY"
+			description="COM_KWPRODUCTS_FORM_DESC_PRODUCT_METAKEY"
+			hint="COM_KWPRODUCTS_FORM_LBL_PRODUCT_METAKEY"/>
+		<field name="metadesc"
+			rows="5"
+			filter="raw"
+			type="textarea"
+			class="metadesc"
+			label="COM_KWPRODUCTS_FORM_LBL_PRODUCT_METADESC"
+			description="COM_KWPRODUCTS_FORM_DESC_PRODUCT_METADESC"
+			hint="COM_KWPRODUCTS_FORM_LBL_PRODUCT_METADESC"/>
+		<field	name="hits"
+		  type="text"
+		  id="hits"
+		  class="readonly"
+		  label="COM_KWPRODUCTS_FORM_LBL_PRODUCT_HITS"
+			description="COM_KWPRODUCTS_FORM_DESC_PRODUCT_HITS"
+		  size="20"
+		  readonly="true"
+		  filter="unset"
+		  />
+		<field name="version_note"
+			type="text"
+			label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
+			description="JGLOBAL_FIELD_VERSION_NOTE_DESC"
+			class="inputbox"
+			size="45"
+			labelclass="control-label"/>
+	</fieldset>
+</form>

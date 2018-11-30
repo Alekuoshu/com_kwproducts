@@ -1,0 +1,20 @@
+/*Product item*/
+
+/*Social Media*/
+
+.kwproducts .social-media .menu li {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.kwproducts .social-media .menu li:last-child {
+	margin-right: 0;
+}
+
+.kwproducts .social-media .item {
+	font-size: 25px;
+}
+
+.kwproducts .social-media .item:hover {
+	background: transparent;
+}

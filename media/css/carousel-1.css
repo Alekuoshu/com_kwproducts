@@ -1,0 +1,193 @@
+
+
+/*for carousel-1 layout */
+.jnilla-gallery .carousel-1 {
+	margin-top: 20px;
+}
+.jnilla-gallery .carousel-1 .carousel {
+	overflow: hidden;
+}
+.jnilla-gallery .carousel-1 .item img {
+  width: 100%;
+}
+.jnilla-gallery .carousel-1.gallery .item img {
+  cursor: pointer;
+}
+.jnilla-gallery .carousel-1 .carousel-indicators {
+	width: 9%;
+	display: inline-block;
+	overflow: hidden;
+	top: 0;
+	right: 0;
+	transition: top 0.5s linear;
+	-webkit-transition: top 0.5s linear;
+	-moz-transition: top 0.5s linear;
+	-o-transition: top 0.5s linear;
+}
+@media only screen and (max-width: 480px) {
+	.jnilla-gallery .carousel-1 .carousel-indicators {
+		display: none;
+	}
+}
+.jnilla-gallery .carousel-1 .carousel-indicators.on {
+	background: red;
+}
+.jnilla-gallery .carousel-1:hover .carousel-control {
+	opacity: 0.7;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+}
+.jnilla-gallery .carousel-1:hover .carousel-caption {
+	opacity: 1;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+}
+.jnilla-gallery .carousel-1 .carousel-control {
+	z-index: 999;
+	border: none;
+	border-radius: 0;
+	background: #4A4A4A;
+	opacity: 0;
+	font-weight: normal;
+	font-size: 2.5em;
+	top: 48%;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+}
+@media only screen and (max-width: 480px) {
+	.jnilla-gallery .carousel-1 .carousel-control {
+		font-size: 3em;
+	}
+}
+.jnilla-gallery .carousel-1 .carousel-control:hover {
+	opacity: 1;
+}
+.jnilla-gallery .carousel-1 .img-container {
+	width: 90%;
+	display: inline-block;
+}
+@media only screen and (max-width: 1199px) {
+	.jnilla-gallery .carousel-1 .img-container {
+		height: auto;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.jnilla-gallery .carousel-1 .img-container {
+		height: auto;
+		width: 100%;
+	}
+}
+.jnilla-gallery .carousel-1 .thumb {
+	border: 1px solid transparent;
+	margin-bottom: 8.3%;
+	position: relative;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+}
+.jnilla-gallery .carousel-1 .thumb .rollover {
+	background-color: rgba(0, 0, 0, 0.3);
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+.jnilla-gallery .carousel-1 .thumb:last-child {
+	margin-bottom: 0;
+}
+.jnilla-gallery .carousel-1 .thumb:hover,
+.jnilla-gallery .carousel-1 .thumb.active {
+	border: 1px solid grey;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+}
+.jnilla-gallery .carousel-1 .thumb:hover .rollover,
+.jnilla-gallery .carousel-1 .thumb.active .rollover {
+	background-color: rgba(0, 0, 0, 0);
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	top: auto;
+	right: auto;
+	left: 0;
+	bottom: auto;
+}
+.jnilla-gallery .carousel-1 .carousel-control.left {
+	left: 0;
+}
+.jnilla-gallery .carousel-1 .carousel-control.right {
+	right: 10%;
+}
+@media only screen and (max-width: 480px) {
+	.jnilla-gallery .carousel-1 .carousel-control.right {
+		right: 0;
+	}
+}
+.jnilla-gallery .carousel-1 .carousel .item {
+	transition: opacity 0.3s;
+}
+.jnilla-gallery .carousel-1 .carousel .active.left,
+.jnilla-gallery .carousel-1 .carousel .active.right {
+	left: 0;
+	opacity: 0;
+	z-index: 2;
+}
+.jnilla-gallery .carousel-1 .carousel .next,
+.jnilla-gallery .carousel-1 .carousel .prev {
+	left: 0;
+	opacity: 1;
+	z-index: 1;
+}
+.jnilla-gallery .carousel-1 .carousel-caption {
+	background-color: rgba(74, 74, 74, 0.6);
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 0.8em;
+	opacity: 0;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+}
+.jnilla-gallery .carousel-1 .carousel-caption h4 {
+	font-size: 18px;
+}
+.jnilla-gallery .carousel-1 .no-block {
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+/*fade effect*/
+.carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-inner .active {
+  opacity: 1;
+}
+.carousel-inner .active.left,
+.carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-inner .next.left,
+.carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-control {
+  z-index: 2;
+}
