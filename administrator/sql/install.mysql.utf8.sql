@@ -20,8 +20,6 @@ CREATE TABLE IF NOT EXISTS `#__kwproducts_products` (
 `images` TEXT NOT NULL ,
 `video` VARCHAR(200)  NOT NULL ,
 `description` TEXT NOT NULL ,
-`url` VARCHAR(255)  NOT NULL ,
-`social` TEXT NOT NULL ,
 `metakey` TEXT NOT NULL ,
 `metadesc` TEXT NOT NULL ,
 `access` INT(10) UNSIGNED NOT NULL DEFAULT '0',
