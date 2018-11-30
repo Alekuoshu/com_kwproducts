@@ -15,7 +15,6 @@ JLoader::register('KwproductsHelpersKwproducts', JPATH_COMPONENT_SITE . '/helper
 
 $item = $this->item;
 $images_items = json_decode($item->images);
-$social_items = json_decode($item->social);
 $media_gallery = $item->media_gallery;
 
 //get params
@@ -77,10 +76,17 @@ $db->setQuery($query);
 $result = $db->query();
 //////////////////////////
 
+// Obtiene el Itemid del menu
+$app = JFactory::getApplication();
+$menu = $app->getMenu();
+$Alias = $app->getMenu()->getActive()->alias;
+$Route = $app->getMenu()->getActive()->route;
+
 
 ?>
 
 <div class="kwproducts<?php echo $this->pageclass_sfx; ?>">
+<a class="btn-style-1" href="<?php echo $Route; ?>"><span class="fa fa-chevron-left"></span> Volver</a>
 	<div class="product-item">
 			<?php // page header ?>
 			<h1 class="page-header"><?php echo $item->product; ?></h1>
@@ -111,52 +117,6 @@ $result = $db->query();
 						<h3 class="product-description"><?php echo JText::_('COM_KWPRODUCTS_PRODUCT_DESCRIPTION');?></h3>
 						<p class="published"><i class="fa fa-calendar"></i> <?php echo $published; ?> / <i class="fa fa-eye"></i> <?php echo $newHit.' '.$textHits; ?></p>
 						<p class="description"><?php echo $item->description; ?></p>
-						<?php //Tags ?>
-						<p class="tags"><?php echo JText::_('COM_KWPRODUCTS_PRODUCT_TAGS');?> <?php echo $item->tags; ?></p>
-						<div class="row'fluid">
-							<div class="span6">
-								<?php //Social Media ?>
-								<?php if($social_items): ?>
-									<div class="social-media">
-										<h4 class="social-title"><?php echo JText::_('COM_KWPRODUCTS_PRODUCT_SOCIAL_TITLE');?></h4>
-											<ul class="nav menu">
-												<?php foreach ($social_items as $key => $social): ?>
-													<?php
-														switch ($social->social_name) {
-															case 'Facebook':
-																$icon_social = 'fa fa-facebook-square';
-																break;
-															case 'Instagram':
-																$icon_social = 'fa fa-instagram';
-																break;
-															case 'Twitter':
-																$icon_social = 'fa fa-twitter-square';
-																break;
-															case 'Google':
-																$icon_social = 'fa fa-google-plus-square';
-																break;
-															case 'Linkedin':
-																$icon_social = 'fa fa-linkedin-square';
-																break;
-															case 'Pinterest':
-																$icon_social = 'fa fa-pinterest-square';
-																break;
-														}
-													 ?>
-													<li><a class="item" href="<?php echo $social->social_url; ?>" target="_blank" rel="nofollow"><i class="<?php echo $icon_social; ?>" aria-hidden="true"></i></a></li>
-												<?php endforeach; ?>
-											</ul>
-									</div>
-								<?php endif; ?>
-							</div>
-							<div class="span6">
-								<?php //Product URL ?>
-								<?php if($item->url): ?>
-									<h4 class="url_title"><?php echo JText::_('COM_KWPRODUCTS_PRODUCT_URL');?></h4>
-									<a class="url_product" href="<?php echo $item->url; ?>" target="_blank" rel="nofollow"><?php echo $item->url; ?></a>
-								<?php endif; ?>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>

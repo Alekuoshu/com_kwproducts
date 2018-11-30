@@ -122,9 +122,9 @@ if ($idioma == 'Spanish (español)'){
 						<div class="product-item-image">
 							<img class="jn-holder jn-holder-block img-zoom" data-ratio="box" src="<?php echo $item->introimage; ?>" alt="intro-image" data-src="<?php echo $item->introimage; ?>" data-product="<?php echo $item->product; ?>" data-link="<?php echo $link; ?>" data-toggle="modal" data-target="#myModalPreview">
 							<div class="rollover visible-desktop">
-								<span class="hits"><i class="fa fa-eye"></i> <?php echo $hits.' '.$textHits; ?></span>
+								<span class="hits"> <?php echo $hits.' '.$textHits; ?></span>
 								<a class="img-zoom" href="#myModalPreview" data-src="<?php echo $item->introimage; ?>" data-product="<?php echo $item->product; ?>" data-link="<?php echo $link; ?>" data-toggle="modal" title="<?php echo JText::_('COM_KWPRODUCTS_PRODUCTS_TITLE_ZOOM');?>">
-									<i class="fa fa-zoom-in"></i>
+									<i class="fa fa-search-plus"></i>
 								</a>
 								<a class="linkdetail" href="<?php echo $link; ?>" title="<?php echo JText::_('COM_KWPRODUCTS_PRODUCTS_LINK_DETAIL');?>">
 									<i class="fa fa-eye"></i>

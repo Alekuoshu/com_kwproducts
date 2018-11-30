@@ -21,9 +21,9 @@
 		var base = window.location.pathname.split('/');
 		var baseurl = protocol + '//' + host + '/' + base[1];
 		if (window.location.pathname.split('/').length <= 3) {
-			marker = $('<div class="page-autoload-marker"><a href="#" class="btn btn-show-more btn-primary">' + shtext + '</a></div><div class="loading"><img src="media/com_kwproducts/images/loading.gif" alt="LOADING..."></div>');
+			marker = $('<div class="page-autoload-marker"><a href="#" class="btn btn-show-more btn-primary">' + shtext + '</a></div><div class="loading"><i class="fa fa-spinner fa-pulse fa-4x fa-fw"></i></div>');
 		} else {
-			marker = $('<div class="page-autoload-marker"><a href="#" class="btn btn-show-more btn-primary">' + shtext + '</a></div><div class="loading"><img src="' + baseurl + '/media/com_kwproducts/images/loading.gif" alt="LOADING..."></div>');
+			marker = $('<div class="page-autoload-marker"><a href="#" class="btn btn-show-more btn-primary">' + shtext + '</a></div><div class="loading"><i class="fa fa-spinner fa-pulse fa-4x fa-fw"></i></div>');
 		}
 		$('.kwproducts').after(marker);
 		$('.loading').hide();

@@ -73,7 +73,7 @@ class KwproductsViewProduct extends JViewLegacy
 			$checkedOut = false;
 		}
 
-		$canDo = KwprojectsHelper::getActions();
+		$canDo = KwproductsHelper::getActions();
 
 		JToolBarHelper::title(JText::_('COM_KWPRODUCTS_TITLE_PRODUCT'), 'product.png');
 

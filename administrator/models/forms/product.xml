@@ -98,21 +98,6 @@
 			class="product_desc"
 			label="COM_KWPRODUCTS_FORM_LBL_PRODUCT_DESCRIPTION" description="COM_KWPRODUCTS_FORM_DESC_PRODUCT_DESCRIPTION" hint="COM_KWPRODUCTS_FORM_LBL_PRODUCT_DESCRIPTION"
 			required="true"/>
-		<field name="url"
-			validate="url"
-			type="url"
-			class="product_url"
-			label="COM_KWPRODUCTS_FORM_LBL_PRODUCT_URL"
-			description="COM_KWPRODUCTS_FORM_DESC_PRODUCT_URL"
-			hint="COM_KWPRODUCTS_FORM_LBL_PRODUCT_URL"/>
-		<field name="social"
-			multiple="true"
-			formsource="administrator/components/com_kwproducts/models/forms/subform_social.xml" layout="joomla.form.field.subform.repeatable-table"
-			type="subform"
-			class="product_social"
-			label="COM_KWPRODUCTS_FORM_LBL_PRODUCT_SOCIAL"
-			description="COM_KWPRODUCTS_FORM_DESC_PRODUCT_SOCIAL"
-			hint="COM_KWPRODUCTS_FORM_LBL_PRODUCT_SOCIAL"/>
 		<field name="metakey"
 			rows="5"
 			filter="raw"

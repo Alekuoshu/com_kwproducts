@@ -66,9 +66,9 @@ class KwproductsViewProducts extends JViewLegacy
 	protected function addToolbar()
 	{
 		$state = $this->get('State');
-		$canDo = KwprojectsHelper::getActions();
+		$canDo = KwproductsHelper::getActions();
 
-		JToolBarHelper::title(JText::_('COM_KWPRODUCTS_TITLE_PROJECTS'), 'grid-2');
+		JToolBarHelper::title(JText::_('COM_KWPRODUCTS_TITLE_PRODUCTS'), 'grid-2');
 
 		// Check if the form exists before showing the add/edit buttons
 		$formPath = JPATH_COMPONENT_ADMINISTRATOR . '/views/product';
@@ -152,7 +152,7 @@ class KwproductsViewProducts extends JViewLegacy
 			'a.`id`' => JText::_('JGRID_HEADING_ID'),
 			'a.`ordering`' => JText::_('JGRID_HEADING_ORDERING'),
 			'a.`state`' => JText::_('JSTATUS'),
-			'a.`project`' => JText::_('COM_KWPRODUCTS_PRODUCTS_PROJECT'),
+			'a.`project`' => JText::_('COM_KWPRODUCTS_PRODUCTS_PRODUCT'),
 			'a.`catid`' => JText::_('COM_KWPRODUCTS_PRODUCTS_CATID'),
 			'a.`introimage`' => JText::_('COM_KWPRODUCTS_PRODUCTS_INTROIMAGE'),
 			'a.`hits`' => JText::_('COM_KWPRODUCTS_PRODUCTS_HITS'),
