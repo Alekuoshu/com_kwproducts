@@ -91,7 +91,7 @@ class KwproductsModelProduct extends JModelItem
 					->select(
 						$this->getState(
 							'item.select', 'a.id, a.asset_id, a.product, a.alias, a.description, ' .
-							'a.state, a.catid, a.introimage, a.media_gallery, a.created_by, a.images, a.video, a.url, a.social, ' .
+							'a.state, a.catid, a.introimage, a.media_gallery, a.created_by, a.images, a.video, ' .
 							'a.modified_by, a.checked_out, a.checked_out_time, a.publishdate, ' .
 							'a.ordering, a.metakey, a.metadesc, a.access, a.hits'
 						)

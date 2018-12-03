@@ -39,9 +39,10 @@
 .kwproducts #filters {
 	margin-top: 50px;
 	margin-bottom: 50px;
-	display: table;
+	/* display: table;
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: auto; */
+	display: none;
 }
 
 .kwproducts .button-group {

@@ -142,6 +142,8 @@ if ($idioma == 'Spanish (español)'){
 			<?php endforeach; ?>
 			<?php //echo GridifyHelper::setGrid(2, array('items' => $buffer)); ?>
 		</div>
+	<?php else: ?>
+		<h2><?php echo JText::_('COM_KWPRODUCTS_PRODUCTS_NO_PRODUCTS');?></h2>
 	<?php endif; ?>
 
 	<?php // pagination ?>
